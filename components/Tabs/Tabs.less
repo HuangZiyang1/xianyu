@@ -1,0 +1,22 @@
+/* components/Tabs/Tabs.wxss */
+.tabs_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .tabs_item {
+        flex: 1;
+        width: 33.33vw;
+        height: 70rpx;
+        line-height: 70rpx;
+        color: gray;
+        text-align: center;
+        border-bottom: 1px solid lightgray;
+    }
+    .active {
+        color:var(--themeColor);
+        border-bottom: 1px solid currentColor;
+    }
+}
