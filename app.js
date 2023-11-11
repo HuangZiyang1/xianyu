@@ -1,6 +1,14 @@
 // app.js
 App({
 
+  globaldata: {
+    // 设置全局可用的数据,示例：
+    // 在各自index.js中，使用let tmpvar = getApp() 获得实例
+    // 通过getApp().globalData.[atriname] = "sth" 赋值
+    // https://blog.csdn.net/sinat_33937178/article/details/79124022
+    appName: 'xianyu'
+  },
+
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
