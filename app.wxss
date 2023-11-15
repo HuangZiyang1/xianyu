@@ -9,7 +9,7 @@ page,view,text,image,swiper,swiper-item,navigator {
 
 /* define main theme color */
 page{
-    --themeColor: #d81e06;
+    --themeColor: #8ECCFF;
     font-size: 28rpx;
 }
 
