@@ -1,23 +1,44 @@
 // pages/index/index.js
-Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
+//Page Object
+Page({
   data: {
-
+    
   },
+  //options(Object)
+  onLoad(){
+    wx.login().then(res => {
+      let {
+        code
+      } = res;
+      console.log(code);
+      wx.request({
+        url: '/api/wx/login?code=' + code,
+        method: "POST",
+      }).then(res => {
+        // 将token存放在storage中
+        let token = res.data.data.token;
+        if (token) {
+          wx.setStorageSync('Authorization', res.data.data.token)
+          wx.setStorageSync('userId', res.data.data.user_id)
+        } else {
+          wx.showToast({
+            title: '登录异常',
+          })
+        }
 
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
+      })
+    })
+    const options = {
+      url: 'api/wx/login',
+      method: "POST"
+    }
+  },
+  onShow() {
+    if (typeof this.getTabBar === 'function' &&
+    this.getTabBar()) {
+    this.getTabBar().setData({
+      selected: 0
+    })
   }
-})
+}
+});

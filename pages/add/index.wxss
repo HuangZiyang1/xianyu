@@ -1,1 +1,12 @@
 /* pages/add/index.wxss */
+page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.add-container {
+  display: flex;
+  width: calc(340 / 375 * 100vw);
+}

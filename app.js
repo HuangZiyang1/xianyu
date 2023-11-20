@@ -6,7 +6,11 @@ App({
     // 在各自index.js中，使用let tmpvar = getApp() 获得实例
     // 通过getApp().globalData.[atriname] = "sth" 赋值
     // https://blog.csdn.net/sinat_33937178/article/details/79124022
-    appName: 'xianyu'
+    appName: 'xianyu',
+    pickname:'八个字的名字名字',
+    school:'广东工业大学（大学城校区）生活东区',
+    address:'生活东区东12',
+    phoneNumber:'15113197845'
   },
 
   /**

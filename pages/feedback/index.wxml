@@ -1,2 +1,3 @@
 <!--pages/feedback/index.wxml-->
-<text>pages/feedback/index.wxml</text>
+<!-- <text>pages/feedback/index.wxml</text> -->
+<view class="text">客服中心电话：136689035728</view>

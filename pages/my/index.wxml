@@ -1,2 +1,66 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<!-- pages/my/index.wxml -->
+<view class="user-container">
+    <view class="user-info-container">
+         <view class="avatar-container">
+        <image class="avatar" src="../../icons/我的.png" mode="widthFix" />
+        <image class="emoji" mode="widthFix" src="../../icons/Emoji.png"></image>
+    </view>
+    <view class="text-container">
+        <view class="name-container">
+            <text class="pickname">{{pickname}}</text>
+        </view> 
+    </view>
+    </view>
+   
+</view>
+<view class="info-container">
+    <view class="info-item-container">
+        <view class="icon-container">
+            <image class="icon" src="../../icons/address.png" mode="widthFix" />
+        </view>
+        <view class="text-container">
+            <view class="detail-info">学校：{{school}}</view>
+            <view class="reset">修改</view>
+        </view>
+    </view>
+    <view class="info-item-container">
+        <view class="icon-container">
+            <image class="icon" src="../../icons/positon.png" mode="widthFix" />
+        </view>
+        <view class="text-container">
+            <view class="detail-info">地址：{{address}}</view>
+            <view class="reset">修改</view>
+        </view>
+    </view>
+    <view class="info-item-container">
+        <view class="icon-container">
+            <image class="icon" src="../../icons/contact.png" mode="widthFix" />
+        </view>
+        <view class="text-container">
+            <view class="detail-info">联系方式：15113197845</view>
+            <view class="reset">修改</view>
+        </view>
+    </view>
+</view>
+<view class="tools-container">
+    <navigator class="tool-item" url="../my_add/index">
+        <view class="tool-item-rectangle"></view>
+        <view class="tool-item-text">我的上架/服务</view>
+        <image class="tool-arrow-icon" src="../../icons/arrow.svg" mode="widthFix" />
+    </navigator>
+    <navigator class="tool-item" url="../feedback/index">
+        <view class="tool-item-rectangle"></view>
+        <view class="tool-item-text">客服中心</view>
+        <image class="tool-arrow-icon" src="../../icons/arrow.svg" mode="widthFix" />
+    </navigator>
+    <navigator class="tool-item" url="../cooperation/index">
+        <view class="tool-item-rectangle"></view>
+        <view class="tool-item-text">商务合作</view>
+        <image class="tool-arrow-icon" src="../../icons/arrow.svg" mode="widthFix" />
+    </navigator>
+    <navigator class="tool-item tool-last-item" url="../rules/index">
+        <view class="tool-item-rectangle"></view>
+        <view class="tool-item-text">站内规则和说明</view>
+        <image class="tool-arrow-icon" src="../../icons/arrow.svg" mode="widthFix" />
+    </navigator>
+</view>

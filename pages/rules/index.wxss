@@ -1,1 +1,23 @@
 /* pages/rules/index.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.text-container {
+  margin-top: 33.33%;
+  width: calc(300 / 375 * 100vw);
+  height: calc(200 / 812 * 100vh);
+  border-radius: 14px;
+  border: 1px solid #000;
+  background: var(--1, #ffdbdb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-container .text {
+  padding: 30rpx;
+  height: auto;
+  text-align: center;
+  width: calc(300 / 375 * 100vw);
+}

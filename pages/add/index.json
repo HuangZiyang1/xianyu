@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "添加上架",
+  "navigationBarTextStyle":"black"
 }

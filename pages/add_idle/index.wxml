@@ -1,0 +1,26 @@
+<!--pages/add_idle/index.wxml-->
+<view class="book-container">
+    <input class="" value="" type="text"  placeholder="闲置名字" placeholder-style="" placeholder-class="input-placeholder"
+       maxlength="25" focus="false" bindinput="" bindfocus="" bindblur="" bindconfirm="">
+      
+    </input>
+    <textarea class="textarea" model:value="{{text}}" placeholder="请描述一下你的闲置吧" placeholder-style="" placeholder-class="textarea-placeholder" maxlength="140" auto-height="" bindinput="" bindfocus="" bindblur="" bindconfirm="" bindlinechange="%{15}"></textarea>
+    <view class="addpic-container">
+        <view class="addpic pic-item" bindtap="addPic">+</view>
+        <view class="pic-item" wx:for="{{pics}}">
+            <image class="item" src="{{item.tempFilePath}}" mode="aspectFill" />
+        </view>
+    </view>
+    <!-- <button  size="default" type="primary" plain 
+      open-type="getUserInfo" bindgetuserinfo="handleUserInfo">
+    获取个人信息
+    </button> -->
+    <view class="getdetail" bindtap="getUserInfo1">获取个人信息</view>
+    <view class="myInformation">{{globaldata.address}}</view>
+    <view class="myInformation">{{globaldata.phoneNumber}}</view>
+    <view class="myInformation">{{globaldata.school}}</view>
+    <view class="price">价格</view>
+    <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
+      </view>
+</view>

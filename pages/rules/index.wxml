@@ -1,2 +1,10 @@
 <!--pages/rules/index.wxml-->
-<text>pages/rules/index.wxml</text>
+<view class="text-container">
+    <view class="text">
+ 站内规则和说明：本站主要用于
+    XXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXX
+    </view>
+</view>

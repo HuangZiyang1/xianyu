@@ -1,2 +1,10 @@
 <!--pages/add/index.wxml-->
-<text>pages/add/index.wxml</text>
+<navigator class="add-container" url="../add_book/index">
+    <image class="add-book" src="../../icons/addbook.png" mode="widthFix"/>     
+</navigator>
+<navigator class="add-container" url="../add_idle/index">
+    <image class="add-book" src="../../icons/addidle1.png" mode="widthFix"/>     
+</navigator>
+<navigator class="add-container" url="../add_service/index">
+    <image class="add-book" src="../../icons/Frame 39.png" mode="widthFix"/>     
+</navigator>
