@@ -72,7 +72,7 @@ Component({
       let { contact } = this.data;
       let that = this;
       wx.showModal({
-        title: "修改地址",
+        title: "修改联系方式",
         content: contact,
         editable: true,
         success(res) {

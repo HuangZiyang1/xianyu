@@ -28,5 +28,24 @@ Page({
       Infolist:globaldata
     })
     
+  },
+  handlePickname() {
+    let { pickname } = this.data;
+      let that = this;
+      wx.showModal({
+        title: "修改昵称",
+        content: pickname,
+        editable: true,
+        success(res) {
+          if (res.confirm) {
+            pickname = res.content;
+          }
+        },
+        complete() {
+          that.setData({
+            pickname
+          })
+        }
+      });
   }
 });

@@ -1,17 +1,19 @@
 <!-- pages/my/index.wxml -->
 <view class="user-container">
     <view class="user-info-container">
-         <view class="avatar-container">
-        <image class="avatar" src="../../icons/我的.png" mode="widthFix" />
-        <image class="emoji" mode="widthFix" src="../../icons/Emoji.png"></image>
+        <view class="avatar-container">
+            <image class="avatar" src="../../icons/我的.png" mode="widthFix" />
+            <image class="emoji" mode="widthFix" src="../../icons/Emoji.png"></image>
+        </view>
+        <view class="text-container">
+            <view class="name-container">
+                <text class="pickname">{{pickname}}</text>
+                <view class="setname" bindtap = "handlePickname">修改名称</view>
+            </view>
+            
+        </view>
     </view>
-    <view class="text-container">
-        <view class="name-container">
-            <text class="pickname">{{pickname}}</text>
-        </view> 
-    </view>
-    </view>
-   
+    
 </view>
 <MyInfo />
 <view class="tools-container">
