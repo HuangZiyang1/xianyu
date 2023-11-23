@@ -13,7 +13,8 @@
     </view>
    
 </view>
-<view class="info-container">
+<MyInfo list="{{Infolist}}" />
+<!-- <view class="info-container">
     <view class="info-item-container">
         <view class="icon-container">
             <image class="icon school" src="../../icons/学校插画.svg" mode="widthFix" />
@@ -41,7 +42,7 @@
             <view class="reset">修改</view>
         </view>
     </view>
-</view>
+</view> -->
 <view class="tools-container">
     <navigator class="tool-item" url="../my_add/index">
         <view class="tool-item-rectangle"></view>

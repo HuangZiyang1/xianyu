@@ -1,5 +1,32 @@
 /* pages/add_book/index.wxss */
-textarea {
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.book-container .getinfo-container {
+  width: 352px;
+  height: 126px;
+  flex-shrink: 0;
+  background-color: #d6ecff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+.book-container .getinfo-container .getdetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-container .getinfo-container .userinfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.book-container textarea {
   display: flex;
   width: calc(340 / 375 * 100vw);
   height: calc(667 / 810 * 100vw);
@@ -7,12 +34,12 @@ textarea {
   padding: 22rpx 0;
   background-color: antiquewhite;
 }
-.price {
+.book-container .price {
   background-color: aqua;
   width: auto;
   height: 100rpx;
 }
-.pic-item {
+.book-container .pic-item {
   height: 100rpx;
   width: calc(100vw / 10);
   display: flex;
@@ -20,14 +47,14 @@ textarea {
   align-items: center;
   background-color: white;
 }
-.pic-item image {
+.book-container .pic-item image {
   width: 100%;
   height: 100%;
 }
-.pic-item:not(:last-child) {
+.book-container .pic-item:not(:last-child) {
   margin-right: 6rpx;
 }
-.addpic-container {
+.book-container .addpic-container {
   background-color: pink;
   width: auto;
   height: 100rpx;
@@ -35,10 +62,10 @@ textarea {
   justify-content: start;
   row-gap: 20rpx;
 }
-.addpic {
+.book-container .addpic {
   background-color: aqua;
 }
-.getdetail {
+.book-container .getdetail {
   width: auto;
   height: 100rpx;
 }

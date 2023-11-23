@@ -5,7 +5,8 @@ Page({
    */
   data: {
     text:"",
-    pics:[]
+    pics:[],
+    InfoFlag:0
   },
 
   /**
@@ -79,6 +80,6 @@ Page({
     console.log("1");
     let {globaldata} = getApp()
     this.setData({globaldata})
-    
+    this.setData({InfoFlag:1})
   }
 })
