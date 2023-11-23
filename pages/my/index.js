@@ -7,16 +7,7 @@ Page({
   },
   
 
-  //options(Object)
   onLoad: function(options){
-    // let {globaldata} = getApp()
-    // console.log(globaldata);
-    // this.setData({
-    //   pickname:globaldata.pickname,
-    //   school:globaldata.school,
-    //   address:globaldata.address,
-    //   phoneNumber:globaldata.phoneNumber
-    // })
     this.onLoadUserInfo();
   },
   onReady: function(){

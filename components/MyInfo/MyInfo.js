@@ -43,7 +43,6 @@ Component({
    */
   methods: {
     handleSchool(e) {
-      // console.log(e);
       this.setData({
         schoolIndex: e.detail.value,
       });
