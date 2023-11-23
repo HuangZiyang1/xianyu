@@ -1,0 +1,95 @@
+<!-- pages/my_star/index.wxml -->
+<view class="button-container">
+    <view class="button my-book {{ myBookFlag ? 'active' : '' }}" bindtap="handleMyBook">书籍</view>
+    <view class="button my-idle {{myIdleFlag ? 'active' : ''}}" bindtap="handleMyIdle">闲置</view>
+    <view class="button my-service {{myServiceFlag ? 'active' : ''}}" bindtap="handleMyService">
+        服务
+    </view>
+</view>
+<view class="on-my-book item-container" wx:if="{{myBookFlag}}">
+    <view class="item" wx:for="{{showBookList}}" wx:key="id">
+        <view class="pic-container">
+            <image class="" src="" mode="widthFix" />
+        </view>
+        <view class="title-container">
+            <view class="title-style">
+                <view class="dot"></view>
+                <view class="booktitle">{{item.title}}</view>
+                <!-- <view class="bookisbn">ISBN：9787111695851</view> -->
+                <view class="price">￥10</view>
+            </view>
+            <view class="helptext-container">
+                <view class="helptext">已售完</view>
+                <view class="reset tool">取消收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-tool-bar">
+        <!-- <view class="next-tool"></view> -->
+        <image class="control-tool-reserve" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleBookChangePage" data-index="{{1}}"></image>
+        <view class="page-container">
+            <text class="cur-num">{{bookCurPage}}</text>
+            <text class="xiegang">/</text>
+            <text class="total-num">{{bookMaxPage}}</text>
+        </view>
+        <image class="control-tool" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleBookChangePage" data-index="{{2}}"></image>
+    </view>
+</view>
+<view class="on-my-idle item-container" wx:elif="{{myIdleFlag}}">
+    <view class="item" wx:for="{{showIdleList}}" wx:key="id">
+        <view class="pic-container">
+            <image class="" src="" mode="widthFix" />
+        </view>
+        <view class="title-container">
+            <view class="title-style">
+                <view class="dot"></view>
+                <view class="booktitle">{{item.title}}</view>
+                <!-- <view class="bookisbn">ISBN：9787111695851</view> -->
+                <view class="price">￥{{item.price}}</view>
+            </view>
+            <view class="helptext-container">
+                <view class="helptext">已售完</view>
+                <view class="reset tool">取消收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-tool-bar">
+        <!-- <view class="next-tool"></view> -->
+        <image class="control-tool-reserve" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleIdleChangePage" data-index="{{1}}"></image>
+        <view class="page-container">
+            <text class="cur-num">{{idleCurPage}}</text>
+            <text class="xiegang">/</text>
+            <text class="total-num">{{idleMaxPage}}</text>
+        </view>
+        <image class="control-tool" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleIdleChangePage" data-index="{{2}}"></image>
+    </view>
+</view>
+<view class="on-my-service item-container" wx:elif="{{myServiceFlag}}">
+    <view class="item" wx:for="{{showServiceList}}" wx:key="id">
+        <view class="pic-container">
+            <image class="" src="" mode="widthFix" />
+        </view>
+        <view class="title-container">
+            <view class="title-style">
+                <view class="dot"></view>
+                <view class="booktitle">{{item.title}}</view>
+                <!-- <view class="bookisbn">ISBN：9787111695851</view> -->
+                <view class="price">￥{{item.price}}</view>
+            </view>
+            <view class="helptext-container">
+                <view class="helptext">已售完</view>
+                <view class="reset tool">取消收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-tool-bar">
+        <!-- <view class="next-tool"></view> -->
+        <image class="control-tool-reserve" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleServiceChangePage" data-index="{{1}}"></image>
+        <view class="page-container">
+            <text class="cur-num">{{serviceCurPage}}</text>
+            <text class="xiegang">/</text>
+            <text class="total-num">{{serviceMaxPage}}</text>
+        </view>
+        <image class="control-tool" mode="widthFix" src="../../icons/yuanjiao.svg" bindtap="handleServiceChangePage" data-index="{{2}}"></image>
+    </view>
+</view>

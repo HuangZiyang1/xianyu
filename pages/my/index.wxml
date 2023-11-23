@@ -17,6 +17,11 @@
 </view>
 <MyInfo />
 <view class="tools-container">
+    <navigator class="tool-item" url="../my_star/index">
+        <view class="tool-item-rectangle"></view>
+        <view class="tool-item-text">我的收藏</view>
+        <image class="tool-arrow-icon" src="../../icons/arrow.svg" mode="widthFix" />
+    </navigator>
     <navigator class="tool-item" url="../my_add/index">
         <view class="tool-item-rectangle"></view>
         <view class="tool-item-text">我的上架/服务</view>
