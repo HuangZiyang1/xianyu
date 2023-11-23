@@ -1,30 +1,32 @@
-<!--components/MyInfo/MyInfo.wxml-->
+<!-- components/MyInfo/MyInfo.wxml -->
 <view class="info-container">
     <view class="info-item-container">
         <view class="icon-container">
             <image class="icon school" src="../../icons/学校插画.svg" mode="widthFix" />
         </view>
-        <view class="text-container">
-            <view class="detail-info">学校：{{list.school}}</view>
-            <view class="reset">修改</view>
-        </view>
+        <picker class="" mode="selector" bindchange="handleSchool" range="{{schoolArray}}" value="{{schoolIndex}}" bindcancel="">
+            <view class="text-container">
+                <view class="detail-info">学校：{{array[schoolIndex]}}</view>
+                <view class="reset">修改</view>
+            </view>
+        </picker>
     </view>
     <view class="info-item-container">
         <view class="icon-container">
             <image class="icon" src="../../icons/地址插画.svg" mode="aspectFit" />
         </view>
         <view class="text-container">
-            <view class="detail-info">地址：{{list.address}}</view>
-            <view class="reset">修改</view>
+            <view class="detail-info">地址：{{address}}</view>
+            <view class="reset" bindtap = "handleAddress">修改</view>
         </view>
     </view>
     <view class="info-item-container">
         <view class="icon-container">
             <image class="icon" src="../../icons/联系方式插画.svg" mode="widthFix" />
-        </view>
-        <view class="text-container">
-            <view class="detail-info">联系方式：{{list.phoneNumber}}</view>
-            <view class="reset">修改</view>
-        </view>
+        </view>   
+            <view class="text-container">
+                <view class="detail-info">联系方式：{{contact}}</view>
+                <view class="reset" bindtap = "handleContact">修改</view>
+            </view>
     </view>
 </view>

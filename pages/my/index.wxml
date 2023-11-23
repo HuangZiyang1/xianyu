@@ -13,7 +13,7 @@
     </view>
    
 </view>
-<MyInfo list="{{Infolist}}" />
+<MyInfo />
 <!-- <view class="info-container">
     <view class="info-item-container">
         <view class="icon-container">

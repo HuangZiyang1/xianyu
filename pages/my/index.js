@@ -2,12 +2,6 @@
 //Page Object
 Page({
   data: {
-    Infolist:{
-      school:'没学上了',
-      address:'默认地址',
-      phoneNumber:"无",
-      pickname:'微信用户',
-    },
     pickname:'微信用户',
    
   },
