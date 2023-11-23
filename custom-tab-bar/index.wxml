@@ -1,7 +1,29 @@
 <!--custom-tab-bar/index.wxml-->
-<view class="tab-bar">
+<!-- <view class="tab-bar">
   <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
     <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
     <view>{{item.text}}</view>
+  </view>
+</view> -->
+
+<view class="tab-bar">
+  <view class="tab-bar-item" bindtap="switchTab" data-index="0" data-path="{{list[0].pagePath}}">
+    <image src="{{selected === 0 ? list[0].selectedIconPath : list[0].iconPath}}"></image>
+    <view>{{list[0].text}}</view>
+  </view>
+  <view class="tab-bar-item" bindtap="switchTab" data-index="1" data-path="{{list[1].pagePath}}">
+    <image src="{{selected === 1 ? list[1].selectedIconPath : list[1].iconPath}}"></image>
+    <view>{{list[1].text}}</view>
+  </view>
+  <view class="add" bindtap="switchTab" data-index="2" data-path="{{list[2].pagePath}}">
+    <image src="{{selected === 2 ? list[2].selectedIconPath : list[2].iconPath}}"></image>
+  </view>
+  <view class="tab-bar-item" bindtap="switchTab" data-index="3" data-path="{{list[3].pagePath}}">
+    <image src="{{selected === 3 ? list[3].selectedIconPath : list[3].iconPath}}"></image>
+    <view>{{list[3].text}}</view>
+  </view>
+  <view class="tab-bar-item" bindtap="switchTab" data-index="4" data-path="{{list[4].pagePath}}">
+    <image src="{{selected === 4 ? list[4].selectedIconPath : list[4].iconPath}}"></image>
+    <view>{{list[4].text}}</view>
   </view>
 </view>

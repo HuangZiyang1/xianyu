@@ -16,7 +16,7 @@
 <view class="info-container">
     <view class="info-item-container">
         <view class="icon-container">
-            <image class="icon" src="../../icons/address.png" mode="widthFix" />
+            <image class="icon school" src="../../icons/学校插画.svg" mode="widthFix" />
         </view>
         <view class="text-container">
             <view class="detail-info">学校：{{school}}</view>
@@ -25,7 +25,7 @@
     </view>
     <view class="info-item-container">
         <view class="icon-container">
-            <image class="icon" src="../../icons/positon.png" mode="widthFix" />
+            <image class="icon" src="../../icons/地址插画.svg" mode="aspectFit" />
         </view>
         <view class="text-container">
             <view class="detail-info">地址：{{address}}</view>
@@ -34,7 +34,7 @@
     </view>
     <view class="info-item-container">
         <view class="icon-container">
-            <image class="icon" src="../../icons/contact.png" mode="widthFix" />
+            <image class="icon" src="../../icons/联系方式插画.svg" mode="widthFix" />
         </view>
         <view class="text-container">
             <view class="detail-info">联系方式：15113197845</view>

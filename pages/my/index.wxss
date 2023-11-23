@@ -76,9 +76,10 @@
   border-radius: 16rpx;
 }
 .info-container .icon-container {
-  margin-left: 26rpx;
-  width: calc(40 / 812 * 100vh - 2px);
-  height: calc(40 / 812 * 100vh - 2px);
+  width: calc(63 / 812 * 100vh + 2px);
+  height: calc(50 / 812 * 100vh + 2px);
+  display: flex;
+  align-items: center;
 }
 .info-container .icon-container image {
   width: 100%;
