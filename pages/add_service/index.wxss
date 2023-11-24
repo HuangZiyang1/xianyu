@@ -1,1 +1,191 @@
-/* pages/add_service/index.wxss */
+/* pages/add_book/index.wxss */
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .book-container .getinfo-container {
+    width: 704rpx;
+    height: 400rpx;
+    flex-shrink: 0;
+    background-color: #d6ecff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20rpx;
+  }
+  .book-container .getinfo-container .getdetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .book-container .getinfo-container .userinfo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book-container .form {
+    width: 704rpx;
+    flex-shrink: 0;
+    background-color: #8eccff;
+    stroke-width: 1px;
+    stroke: #000;
+  }
+  .book-container .form .item {
+    display: flex;
+  }
+  .book-container .form .form-price {
+    display: flex;
+    align-items: center;
+    height: 92rpx;
+  }
+  .book-container textarea {
+    display: flex;
+    width: calc(222 / 375 * 100vw);
+    height: calc(120 / 810 * 100vw);
+    margin: auto;
+    padding: 22rpx 0;
+    background-color: white;
+    border-radius: 8px;
+    border: 0.5px solid #000;
+    background: #fff;
+    text-indent: 6rpx;
+  }
+  .book-container .price {
+    background-color: aqua;
+    width: auto;
+    height: 100rpx;
+  }
+  .book-container .pic-item {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+  }
+  .book-container .pic-item .item {
+    width: 100%;
+    height: 100%;
+  }
+  .book-container .pic-item .cha {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+    rotate: 45deg;
+  }
+  .book-container .form-pics {
+    display: flex;
+    justify-content: spacer;
+    height: auto;
+  }
+  .book-container .pic-item:not(:last-child) {
+    margin-right: 6rpx;
+  }
+  .book-container .addpic-container {
+    background-color: pink;
+    width: calc(242 / 375 * 100vw);
+    height: auto;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .book-container .addpic {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    background: #fff;
+    text-align: center;
+    font-size: 30px;
+  }
+  .book-container .getdetail {
+    width: auto;
+    height: 100rpx;
+  }
+  .book-container .uploadbook-container {
+    width: 704rpx;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .book-container .uploadbook-container .upload-item {
+    display: flex;
+    align-items: center;
+    height: 80rpx;
+    background-color: antiquewhite;
+  }
+  .book-container .uploadbook-container .upload-item .scan {
+    width: 56rpx;
+    height: 56rpx;
+  }
+  .book-container .uploadbook-container .upload-item .isbn {
+    width: 184rpx;
+    height: 50rpx;
+    flex-shrink: 0;
+    border-radius: 50rpx;
+    border: 0.5px solid #000;
+    background: #d6ecff;
+  }
+  .book-container .uploadbook-container .upload-item .isbn .placeholder {
+    font-size: 20rpx;
+  }
+  .book-container .uploadbook-container .upload-item .title {
+    width: 242rpx;
+    height: 60rpx;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #d6ecff;
+  }
+  .book-container .uploadbook-container .upload-item .title .input-placeholder {
+    text-align: center;
+  }
+  .book-container .uploadbook-container .upload-item .del {
+    width: 112rpx;
+    height: 54rpx;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid #202020;
+    background-color: #bae7ae;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .book-container .uploadbook-container .addbutton {
+    width: 56rpx;
+    height: 56rpx;
+  }
+  .confirm {
+    width: 116px;
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    margin-top: 60rpx;
+    border: 1px solid #202020;
+    background-color: #96FFFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+    /* 弹窗标题 */
+    font-family: PingFang SC;
+    font-size: 34rpx;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    right: 60rpx;
+  }
+  .blank {
+    height: 100rpx;
+  }
+  

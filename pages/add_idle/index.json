@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {"MyInfo":"../../components/MyInfo/MyInfo"},
+  "navigationBarTitleText": "上架闲置"
+  
 }

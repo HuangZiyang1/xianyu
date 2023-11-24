@@ -1,2 +1,26 @@
-<!--pages/add_service/index.wxml-->
-<text>pages/add_service/index.wxml</text>
+<view class="book-container">
+  <view class="getinfo-container">
+    <view class="getdetail" bindtap="getUserInfo1" wx:if="{{!InfoFlag}}">获取个人信息</view>
+    <view class="userinfo-container" wx:else>
+      <MyInfo></MyInfo>
+    </view>
+  </view>
+  <view class="form">
+    <view class="form-price item">
+      <view class="helptext">服务价格：</view>
+      <view class="dollaricon">￥</view>
+      <view class="lowprice">100</view>
+      <view class="daoicon">~</view>
+      <view class="hightprice">200</view>
+    </view>
+    <view class="form-introduce item">
+      <view class="helptext">服务介绍：</view>
+      <textarea class="textarea" model:value="{{text}}" placeholder="请描述一下你的服务吧" placeholder-style="" placeholder-class="textarea-placeholder" maxlength="140" auto-height="" bindinput="" bindfocus="" bindblur="" bindconfirm="" bindlinechange="%{15}"></textarea>
+    </view>
+
+  </view>
+
+
+</view>
+<view class="confirm">确认上架</view>
+<view class="blank"></view>
