@@ -1,82 +1,126 @@
 /* pages/add_book/index.wxss */
 .book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .getinfo-container {
+    width: 352px;
+    height: 400rpx;
+    flex-shrink: 0;
+    background-color: #d6ecff;
+    // border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20rpx;
+    .getdetail {
+      // text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .userinfo-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .form {
+    .item {
+      display: flex;
+    }
+    width: 352px;
+    // height: 245px;
+    
+    flex-shrink: 0;
+    background-color: #8eccff;
+    stroke-width: 1px;
+    stroke: #000;
+    .form-price {
+      display: flex;
+      align-items: center;
+      height: 92rpx;
+    }
+  }
+  textarea {
+    display: flex;
+    width: calc(222 / 375 * 100vw);
+    height: calc(120 / 810 * 100vw);
+    // border: 1px solid black;
+    margin: auto;
+    padding: 22rpx 0;
+    background-color: white;
+    border-radius: 8px;
+    border: 0.5px solid #000;
+    background: #fff;
+    text-indent: 6rpx;
+  }
+
+  .price {
+    background-color: aqua;
+    width: auto;
+    height: 100rpx;
+  }
+
+  .pic-item {
+    
+    width: 75px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    .getinfo-container {
-        width: 352px;
-        height: 126px;
-        flex-shrink: 0;
-        background-color: #d6ecff;
-        // border: 1px solid black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20rpx;
-        .getdetail {
-            // text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .userinfo-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-      }
-      
-      textarea {
-        display: flex;
-        width: calc(340 / 375 * 100vw);
-        height: calc(667 / 810 * 100vw);
-        // border: 1px solid black;
-        margin: auto;
-        padding: 22rpx 0;
-        background-color: antiquewhite;
-      }
-      
-      .price {
-        background-color: aqua;
-        width: auto;
-        height: 100rpx;
-      }
-      
-      .pic-item {
-        height: 100rpx;
-        width: calc(100vw / 10);
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        background-color: white;
-        image {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      
-      .pic-item:not(:last-child) {
-        margin-right: 6rpx;
-      }
-      
-      .addpic-container {
-        background-color: pink;
-        width: auto;
-        height: 100rpx;
-        display: flex;
-        justify-content: start;
-        row-gap: 20rpx;
-      }
-      
-      .addpic {
-        background-color: aqua;
-      }
-      
-      .getdetail {
-        width: auto;
-        height: 100rpx;
-      }
-}
+    position: relative;
+    background-color: white;
+    .item {
+      width: 100%;
+      height: 100%;
+    }
+    .cha {
+      width: 60rpx;
+      height: 60rpx;
+      position: absolute;
+      right: 0;
+      top: 0;
+      rotate: 45deg;
+    }
+  }
 
+  .form-pics {
+    // height: 190rpx;
+    display: flex;
+    justify-content: spacer;
+    height: auto;
+  }
+
+  .pic-item:not(:last-child) {
+    margin-right: 6rpx;
+  }
+
+  .addpic-container {
+    background-color: pink;
+    width: calc(242 / 375 * 100vw);
+    height: auto;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .addpic {
+    // background-color: aqua;
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    background: #fff;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .getdetail {
+    width: auto;
+    height: 100rpx;
+  }
+}
