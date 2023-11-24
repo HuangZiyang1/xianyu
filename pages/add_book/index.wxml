@@ -14,19 +14,31 @@
       <view class="hightprice">200</view>
     </view>
     <view class="form-introduce item">
-    <view class="helptext">书籍介绍：</view>
+      <view class="helptext">书籍介绍：</view>
       <textarea class="textarea" model:value="{{text}}" placeholder="请描述一下你的书籍吧" placeholder-style="" placeholder-class="textarea-placeholder" maxlength="140" auto-height="" bindinput="" bindfocus="" bindblur="" bindconfirm="" bindlinechange="%{15}"></textarea>
     </view>
     <view class="form-pics item">
       <view class="helptext">书籍图片：</view>
       <view class="addpic-container">
-    <view class="addpic pic-item" bindtap="addPic" wx:if="{{!pics[8].tempFilePath}}">+</view>
-    <view class="pic-item" wx:for="{{pics}}">
-      <image class="item" src="{{item.tempFilePath}}" mode="aspectFill"  data-index="{{index}}" bindtap="onTapImage" data-src="{{item.tempFilePath}}" />
-      <image class="cha" src="../../icons/Frame 86.png" bindtap="cancel" data-index="{{index}}"></image>
+        <view class="addpic pic-item" bindtap="addPic" wx:if="{{!pics[8].tempFilePath}}">+</view>
+        <view class="pic-item" wx:for="{{pics}}">
+          <image class="item" src="{{item.tempFilePath}}" mode="aspectFill" data-index="{{index}}" bindtap="onTapImage" data-src="{{item.tempFilePath}}" />
+          <image class="cha" src="../../icons/Frame 86.png" bindtap="cancel" data-index="{{index}}"></image>
+        </view>
+      </view>
     </view>
   </view>
+  <view class="uploadbook-container">
+    <view class="upload-item" wx:for="{{booksCount}}">
+      <image class="scan" mode="aspectFit" src="../../icons/Frame.png"></image>
+      <input class="isbn" model:value="{{}}" type="text" placeholder="扫码/手动输入ISBN码" placeholder-class="placeholder" maxlength="15"></input>
+      <input class="title" value="" type="text" placeholder="添加书名" placeholder-class="input-placeholder" maxlength="20"></input>
+      <view class="del">删除</view>
     </view>
+    <image class="addbutton" src="../../icons/Frame 86.png" mode="widthFix" bindtap="addkuang"/>
+      
   </view>
-  
+
 </view>
+<view class="confirm">确认上架</view>
+<view class="blank"></view>

@@ -6,6 +6,7 @@ Page({
     text: "",
     pics: [],
     InfoFlag: 0,
+    booksCount:1
   },
 
   /**
@@ -84,4 +85,9 @@ Page({
     this.setData({ globaldata });
     this.setData({ InfoFlag: 1 });
   },
+  addkuang() {
+    let {booksCount} = this.data
+    booksCount++
+    this.setData({booksCount})
+  }
 });

@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .book-container .getinfo-container {
-  width: 352px;
+  width: 704rpx;
   height: 400rpx;
   flex-shrink: 0;
   background-color: #d6ecff;
@@ -27,7 +27,7 @@
   align-items: center;
 }
 .book-container .form {
-  width: 352px;
+  width: 704rpx;
   flex-shrink: 0;
   background-color: #8eccff;
   stroke-width: 1px;
@@ -107,5 +107,83 @@
 }
 .book-container .getdetail {
   width: auto;
+  height: 100rpx;
+}
+.book-container .uploadbook-container {
+  width: 704rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.book-container .uploadbook-container .upload-item {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  background-color: antiquewhite;
+}
+.book-container .uploadbook-container .upload-item .scan {
+  width: 56rpx;
+  height: 56rpx;
+}
+.book-container .uploadbook-container .upload-item .isbn {
+  width: 184rpx;
+  height: 50rpx;
+  flex-shrink: 0;
+  border-radius: 50rpx;
+  border: 0.5px solid #000;
+  background: #d6ecff;
+}
+.book-container .uploadbook-container .upload-item .isbn .placeholder {
+  font-size: 20rpx;
+}
+.book-container .uploadbook-container .upload-item .title {
+  width: 242rpx;
+  height: 60rpx;
+  flex-shrink: 0;
+  border-radius: 25px;
+  border: 1px solid #000;
+  background: #d6ecff;
+}
+.book-container .uploadbook-container .upload-item .title .input-placeholder {
+  text-align: center;
+}
+.book-container .uploadbook-container .upload-item .del {
+  width: 112rpx;
+  height: 54rpx;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #202020;
+  background-color: #bae7ae;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-container .uploadbook-container .addbutton {
+  width: 56rpx;
+  height: 56rpx;
+}
+.confirm {
+  width: 116px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #202020;
+  background-color: #96FFFB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  /* 弹窗标题 */
+  font-family: PingFang SC;
+  font-size: 34rpx;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  right: 60rpx;
+}
+.blank {
   height: 100rpx;
 }
