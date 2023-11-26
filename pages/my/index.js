@@ -1,14 +1,16 @@
 // pages/my/index.js
 //Page Object
+import { request } from "../../request/index";
 Page({
   data: {
-    pickname:'微信用户',
+    nickname:'微信用户',
    
   },
   
 
   onLoad: function(options){
     this.onLoadUserInfo();
+    
   },
   onReady: function(){
     
@@ -30,22 +32,45 @@ Page({
     
   },
   handlePickname() {
-    let { pickname } = this.data;
+    let { nickName } = this.data;
       let that = this;
       wx.showModal({
         title: "修改昵称",
-        content: pickname,
+        content: nickName,
         editable: true,
         success(res) {
           if (res.confirm) {
-            pickname = res.content;
+            nickName = res.content;
           }
         },
         complete() {
           that.setData({
-            pickname
+            nickName
           })
         }
       });
+  },
+  postUpdateUserInfo() {
+    request({
+      url: '/user/user/updateUserInfo',
+      method: 'POST',
+      data:{
+        
+          detailAddress: "小谷围",
+          schoolId: 4,
+          campusId: 1,
+          userId: 1,
+          userName: "广工大一",
+          nickName: "nickName哈哈",
+          status: "1",
+          phone: "110",
+          sex: "1",
+          age: 20,
+          avatar: "str"
+      
+      }
+    }).then(result => {
+      console.log(result);
+    })
   }
 });
