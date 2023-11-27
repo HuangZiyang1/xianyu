@@ -1,0 +1,5 @@
+<image class="bg-img" src="../../static/image/background/log.png" mode=""/>
+  <button class="accept" bindtap="getUserInfo" plain="true">授权登录</button>
+  <!-- <view class="reject" bindtap="reject">
+    暂不登录
+  </view> -->

@@ -1,6 +1,5 @@
 // app.js
 App({
-
   globaldata: {
     // 设置全局可用的数据,示例：
     // 在各自index.js中，使用let tmpvar = getApp() 获得实例
@@ -10,14 +9,16 @@ App({
     nickName:'八个字的名字名字',
     school:'广东工业大学（大学城校区）生活东区',
     address:'生活东区东12',
-    phoneNumber:'15113197845'
+    phoneNumber:'15113197845',
+    baseURL: 'http://192.168.3.45:8080',
+    userInfo: null,
   },
 
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
-  onLaunch: function () {
-    
+  onLaunch() {
+    this.__goGetToken()
   },
 
   /**
@@ -39,6 +40,14 @@ App({
    */
   onError: function (msg) {
     
-  }
+  },
+  async __goGetToken() {
+    let token = await wx.getStorageSync("Authorization")
+    if(!token) {
+      wx.redirectTo({
+        url: './pages/gettoken/gettoken',
+      })
+    }
+  },
 })
 

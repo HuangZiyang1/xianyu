@@ -1,0 +1,35 @@
+page {
+  background-color: rgb(223, 246, 212);
+}
+.accept {
+  position: absolute;
+  left: 50%;
+  top: 796rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-right: 100rpx;
+  padding-left: 100rpx;
+  background-color: #A2D28B;
+  white-space: nowrap;
+  color: white;
+  border-radius: 94rpx;
+  transform: translateX(-50%);
+}
+.accept[plain] {
+  border: none;
+  background-color: #A2D28B;
+}
+.reject {
+  position: absolute;
+  left: 50%;
+  top: 380rpx;
+  display: inline;
+  transform: translateX(-50%);
+  color: var(--text-color);
+}
+.bg-img {
+  position: absolute;
+  top: 175rpx;
+  width: 750rpx;
+  height: 750rpx;
+}

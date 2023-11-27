@@ -1,37 +1,47 @@
-// pages/index/index.js
-//Page Object
+import {
+  request
+} from "../../request/index"
+import {
+  login
+} from "../../utils/asyncWx"
+
+const app = getApp()
 Page({
   data: {
-    
+    baseURL:''
   },
   //options(Object)
   onLoad(){
-    // wx.login().then(res => {
-    //   let {
-    //     code
-    //   } = res;
-    //   console.log(code);
-    //   wx.request({
-    //     url: '/api/wx/login?code=' + code,
-    //     method: "POST",
-    //   }).then(res => {
-    //     // 将token存放在storage中
-    //     let token = res.data.data.token;
-    //     if (token) {
-    //       wx.setStorageSync('Authorization', res.data.data.token)
-    //       wx.setStorageSync('userId', res.data.data.user_id)
-    //     } else {
-    //       wx.showToast({
-    //         title: '登录异常',
-    //       })
-    //     }
+    this.setData({
+      baseURL: app.globaldata.baseURL
+    })
+    login().then(res => {
+      let {
+        code
+      } = res;
+      console.log(code);
+      request({
+        url: '/api/wx/login?code=' + code,
+        method: "POST",
+      }).then(res => {
+        // 将token存放在storage中
+        console.log(res);
+        let token = res.data.data.token;
+        if (token) {
+          wx.setStorageSync('Authorization', res.data.data.token)
+          wx.setStorageSync('userId', res.data.data.user_id)
+        } else {
+          wx.showToast({
+            title: '登录异常',
+          })
+        }
 
-    //   })
-    // })
-    // const options = {
-    //   url: 'api/wx/login',
-    //   method: "POST"
-    // }
+      })
+    })
+    const options = {
+      url: 'api/wx/login',
+      method: "POST"
+    }
   },
   onShow() {
     if (typeof this.getTabBar === 'function' &&

@@ -15,7 +15,8 @@
     "pages/add_idle/index",
     "pages/add_service/index",
     "pages/my_add/index",
-    "pages/my_star/index"
+    "pages/my_star/index",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
